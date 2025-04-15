@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html class="mdl-js">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta content="yes" name="mobile-web-app-capable" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>广西工业职业技术学院</title>
+    <link rel="stylesheet" href="./css/zhengshu_detail.css">
+    <!--[if IE 9]><link rel="stylesheet" href="./css/zhengshu_detail_ie9.css"><![endif]-->
+    <style>
+        .Data_Company {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        /*屏幕小于1200px时*/
+        @media only screen and (max-width: 1200px) {
+            .Data_Company {
+                width: 80%;
+                margin: 0 auto;
+            }
+        }
+
+        /*屏幕小于750px时*/
+        @media only screen and (max-width: 750px) {
+            .Data_Company {
+                width: 50%;
+                margin: 0 auto;
+            }
+        }
+
+        /*屏幕小于414px时*/
+        @media only screen and (max-width: 414px) {
+            .Data_Company {
+                width: 100%;
+                padding: 0px 20px;
+            }
+        }
+    </style>
+    <script src="./js/jweixin-1.0.0.js"></script>
+    <script>
+        wx.config({
+            //debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+            appId: 'wx0be8047bc2972892',
+            timestamp: '1744683631',
+            nonceStr: 'N68BBwNkGVfujUss',
+            signature: '9474307c165e85e1e368a4a95f815e8e027f3a0f',
+            jsApiList: [
+                'checkJsApi',
+                'onMenuShareTimeline',
+                'onMenuShareAppMessage',
+                'onMenuShareQQ',
+                'onMenuShareWeibo',
+                'scanQRCode'
+            ]
+        });
+        wx.ready(function () {
+            // 1 判断当前版本是否支持指定 JS 接口，支持批量判断
+            wx.checkJsApi({
+                jsApiList: [
+                    'getNetworkType',
+                    'previewImage',
+                    'onMenuShareTimeline',
+                    'onMenuShareAppMessage',
+                    'onMenuShareQQ',
+                    'onMenuShareWeibo',
+                    'scanQRCode'
+                ],
+                success: function (res) {
+                    //alert(JSON.stringify(res));
+                }
+            });
+            var shareData = {
+                title: '广西工业职业技术学院',
+                desc: '易证书',
+                link: 'https://',
+                imgUrl: 'https://static.yibanyun.cn/Public/Uploads/2021-06-15/1623734463.jpg',
+                trigger: function (res) {
+                    // alert('用户点击发送给朋友');
+                },
+                success: function (res) {
+                    //alert('已分享');
+                },
+                cancel: function (res) {
+                    //alert('已取消');
+                },
+                fail: function (res) {
+                    //alert(JSON.stringify(res));
+                }
+            };
+            wx.onMenuShareAppMessage(shareData);
+            wx.onMenuShareTimeline(shareData);
+            wx.onMenuShareQQ(shareData);
+            wx.onMenuShareWeibo(shareData);
+        });
+        wx.error(function (res) {
+            alert(res.errMsg);
+        });
+    </script>
+    <script>
+
+        function scan(type) {
+            alert('请在易班或微信里扫一扫');
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="mdl-layout__container">
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header is-upgraded" data-upgraded=",MaterialLayout">
+            <header class="mdl-layout__header is-casting-shadow">
+                <div class="mdl-layout-icon"></div>
+                <div class="mdl-layout__header-row">
+                    <div class="mdl-layout__title"><img src="./images/logo.png" alt="">
+                        <h2 align="center">证书查询认证系统</h2>
+                    </div>
+                </div>
+            </header>
+            <div class="mdl-layout__content">
+                <div class="yiban-content">
+                    <div class="page--detail has-qrcode" align="center" class="Data_Company">
+                        <p class="detail-tips">证书已通过验真，该证书为广西工业职业技术学院所颁发，证书编号为1234567890。以下为电子证书：</p>
+                        <!-- 以下是新增内容 --><canvas id="canvas" style="display:none;">
+                            当前浏览器不支持Canvas，请更换浏览器后再试！
+                        </canvas><a href="#" style="display:block;padding:20px;"><img src="./images/460B74090901.jpg"
+                                src="" style="max-height:calc(100vh -
+                            300px);width:auto;"></a><!-- 以下是新增内容 END --><br><br><b>鼠标右键保存证书 或</b>
+                        <a href="https://raw.githubusercontent.com/yibanyun/zhengshu/refs/heads/main/images/54567.pdf"
+                            download="广西工业职业技术学院-3653471.pdf" class="download-btn download-btn--blue">
+                            <b>【下载PDF】</b>
+                        </a><!-- 以下是新增内容 END -->
+                    </div>
+                </div>
+            </div>
+            <footer class="yiban-footer">Copyright © YIBANYUN. All Rights Reserved.</footer>
+        </div>
+    </div>
+    <div class="mdl-notify">
+        <div class="mdl-notify__list"></div>
+    </div>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?2c3b96b62575fe3560cf23ad742d0d77";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <script type="text/javascript" src="./js/jquery-3.4.1.min.js"></script>
+    <!-- 以下是新增内容 -->
+    <script charset="utf-8" src="./js/jspdf.umd.min.js"></script>
+    <script charset="utf-8" src="./js/certificate.min.js"></script>
+    <script>
+        var canvas = document.getElementById('canvas');
+
+        /**
+          * 将图片数据保存至PDF
+          * @param fileName PDF文件名
+          * @returns
+         */
+        function saveToPDF(fileName) {
+            if (window.certificateDataURL) {
+                // 如果是横版，在转PDF时需要将图片旋转90度
+                if (window.layout == 'horizontal') {
+                    var type = 6; // 1:原始图 2:原始图的水平翻转(背面效果) 3:顺时针旋转180度 4:顺时针旋转180度的垂直翻转(倒影效果) 5:顺时针旋转90度的水平翻转(背面效果) 6:顺时针旋转90度 7:逆时针旋转90度的水平翻转(背面效果) 8:逆时针旋转90度
+                    rotate(window.certificateDataURL, type, (dataURL) => {
+                        saveImageToPDF(dataURL, fileName);
+                    })
+                } else {
+                    saveImageToPDF(window.certificateDataURL, fileName);
+                }
+            } else {
+                alert('证书未生成，不能进行下载！')
+            }
+        }
+
+
+        $.ajax({
+            type: 'GET',
+            url: '/app/zhengshu/certificate?number=460B7422F71&sid=460',
+            dataType: 'json',
+            success: function (data) {
+                console.log("Data:", data);
+
+                if (data && JSON.stringify(data) != '{}') {
+                    window.layout = data.layout;
+
+                    genCertificate(
+                        data.stage.width,
+                        data.stage.height,
+                        canvas,
+                        data.text_list,
+                        data.image_list,
+                        (certificateDataURL) => {
+                            // console.log(certificateDataURL);
+                            $('#certificate-image').attr('src', certificateDataURL);
+
+                            window.certificateWidth = data.stage.width;
+                            window.certificateHeight = data.stage.height;
+                            window.certificateDataURL = certificateDataURL;
+                        }
+                    );
+                }
+            },
+            error: function (xhr, type) {
+                console.log("'Ajax error:", type);
+            }
+        });
+
+
+    </script><!-- 以下是新增内容 END -->
+    <script src=".p/js/clipboard.min.js"></script>
+    <script>
+        var clipboard = new ClipboardJS('.copy_url');
+        /*复制成功或失败后提示，不需要可删除*/
+        clipboard.on('success', function (e) {
+            alert('已经复制到剪切版');
+        });
+        clipboard.on('error', function (e) {
+            //console.log('复制失败');
+        });
+        /*复制成功或失败后提示，不需要可删除*/
+    </script>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?2c3b96b62575fe3560cf23ad742d0d77";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</body>
+
+</html>
